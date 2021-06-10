@@ -8,6 +8,17 @@
 </head>
 <body>
     
-    <h1>ciao sono la home</h1>
+    <h1>Ecco i film da vedere!!!!</h1>
+
+    <ul>
+
+        
+        @foreach ($movies as $movie)
+            <li>
+                <div>{{$movie->title}} - {{$movie->original_title}} - data uscita: {{$movie->date}} - voto: {{$movie->vote}} </div>  
+            </li>                
+        @endforeach
+        
+    </ul>
 </body>
 </html>
